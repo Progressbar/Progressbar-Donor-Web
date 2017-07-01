@@ -36,7 +36,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js'
+      'bootstrap-scss$': '../node_modules/bootstrap/scss/bootstrap.scss',
+      'bootstrap-js$': '../node_modules/bootstrap/dist/js/bootstrap.min.js'
     }
   },
   devServer: {
@@ -46,7 +47,13 @@ module.exports = {
   performance: {
     hints: false
   },
-  devtool: '#eval-source-map'
+  devtool: '#eval-source-map',
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+   })
+  ]
 }
 
 if (process.env.NODE_ENV === 'production') {
