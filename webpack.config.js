@@ -11,6 +11,15 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.html$/,
+          use: [ {
+            loader: 'html-loader',
+            options: {
+              minimize: true
+            }
+          }],
+      },
+      {
         test: /\.s[ac]ss$/,
           use: [{
             loader: "style-loader" // creates style nodes from JS strings
