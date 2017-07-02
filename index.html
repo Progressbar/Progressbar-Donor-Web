@@ -9,18 +9,45 @@
   <body>
     <div id="app"></div>
 
-    <header class="navbar">
-      <img class="navbar__main-logo" src="/src/assets/img/logo-progressbar.png" alt="">
-      <a class="navbar__action-btn" href="#">Donate us ↓ </a>
+    <header class="my-navbar">
+      <img class="my-navbar__main-logo" src="/src/assets/img/logo-progressbar.png" alt="">
+      <a class="my-navbar__action-btn" href="#">Donate us ↓ </a>
     </header>
 
     <section class="main-pic">
-      <h1>Progressbar: <br/>
+      <h1 class="main-pic__main-title">Progressbar: <br/>
         <span
          class="txt-rotate"
          data-period="2000"
          data-rotate='[ "CryptoParties", "Open source", "Demos", "Open data", "Bitcoin" ]'></span>
       </h1>
+    </section>
+
+    <section class="why-progressbar">
+      <h1>Why Progressbar</h1>
+        <div class="why-progressbar__icons">
+          <div class="row">
+            <div class="col-sm why-progressbar__icons__icon">
+              <img class="icons" src="./src/assets/img/bitcoin.svg" alt="">
+              <h3>We need title</h3>
+              <p>Progressbar empowers free peer-driven knowledge</p>
+            </div>
+            <div class="col-sm why-progressbar__icons__icon">
+              <h3>We need title</h3>
+              <p>We offer affordable 24/7 cowork in downtown with high speed internet</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm why-progressbar__icons__icon">
+              <h3>We need title</h3>
+              <p>We offer space for incubation of projects</p>
+            </div>
+            <div class="col-sm why-progressbar__icons__icon">
+              <h3>We need title</h3>
+              <p>We support payments via cryptocurrencies for drinks and snacks</p>
+            </div>
+          </div>
+      </div>
     </section>
     <script src="./src/assets/js/writeAnim.js"></script>
 
