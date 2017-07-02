@@ -9,6 +9,7 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
+    "animate.css": "^3.5.2",
     "bootstrap": "^4.0.0-alpha.6"
   },
   "devDependencies": {
