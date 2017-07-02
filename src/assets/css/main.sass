@@ -27,9 +27,14 @@ h1
   color: #252525
 
 h3
-  font-family: 'Raleway Regular'
+  font-family: 'Raleway Medium'
   font-size: 19px
   color: #252525
+
+p
+  font-family: 'Raleway Regular'
+  font-size: 16px
+
 
 .my-navbar
   position: relative
@@ -37,7 +42,7 @@ h3
   margin: 0 auto
   padding: 5px 0
   &__main-logo
-    width: 300px
+    width: 250px
   &__action-btn
     position: absolute
     top: 50%
@@ -55,30 +60,27 @@ h3
     &:hover
       color: #fff
 
-.why-progressbar
-  position: relative
-  width: 80%
-  margin: 0 auto
-  padding: 100px 0
-  &__icons
-    padding: 80px 0
-    &__icon
-      padding: 20px 100px
-
-.icons
-  position: absolute
-  width: 200px
-
 .main-pic
+  position: relative
   width: 100%
-  margin: 0px auto
   padding: 200px 10%
-  background-color: #565656
+  margin: 0px auto
+  background-color: #111
+  background: linear-gradient(90deg, #111 45%, transparent 100%), url("../img/progress-photo.png")
+  background-position: right
+  background-size: contain
   &__main-title
     font-family: "Raleway ExtraLight"
     font-size: 75px
     color: #888
     text-align: left
+  &__donate-us
+    font-family: "Raleway ExtraLight"
+    color: #888
+    font-size: 45px
+    &:hover
+      color: #ccc
+      cursor: pointer
 
 .my-btn
   padding: 12px 20px
@@ -87,3 +89,37 @@ h3
   background-color: #111
   border-color: #111
   color: #fff
+
+.why-progressbar
+  position: relative
+  width: 70%
+  margin: 0 auto
+  padding: 100px 0
+  &__icons
+    padding: 40px 0
+    &__icon
+      position: relative
+      padding: 50px 100px
+
+.icons
+  position: absolute
+  left: 0
+  top: 10px
+  width: 150px
+  height: 150px
+  z-index: -1
+
+.support
+  width: 100%
+  padding: 100px 10%
+  margin: 0px auto
+  background-color: #f7f7f7
+  &__crypto
+    padding: 40px 0
+    &__box
+      padding: 45px
+      margin: 0 25px
+      background-color: white
+      border: 1px solid #eee
+      border-radius: 8px
+      text-align: center
