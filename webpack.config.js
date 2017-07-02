@@ -40,13 +40,18 @@ module.exports = {
         options: {
           name: '[name].[ext]?[hash]'
         }
-      }
+      },
+       {
+         test: /\.css$/,
+         loader: "style-loader!css-loader"
+        }
     ]
   },
   resolve: {
     alias: {
       'bootstrap-scss$': '../node_modules/bootstrap/scss/bootstrap.scss',
-      'bootstrap-js$': '../node_modules/bootstrap/dist/js/bootstrap.min.js'
+      'bootstrap-js$': '../node_modules/bootstrap/dist/js/bootstrap.min.js',
+      'animate-css$': '../node_modules/animate'
     }
   },
   devServer: {
