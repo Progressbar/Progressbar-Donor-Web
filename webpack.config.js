@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-		publicPath: 'dist/',
+		publicPath: '',
     filename: 'build.js'
   },
   module: {
@@ -25,7 +25,7 @@ module.exports = {
             loader: "style-loader" // creates style nodes from JS strings
           }, {
             loader: "css-loader", // translates CSS into CommonJS
-            options: { root: '.' }
+            options: { root: '' }
           }, {
             loader: "sass-loader" // compiles Sass to CSS
           }]
