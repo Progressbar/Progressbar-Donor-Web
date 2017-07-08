@@ -44,6 +44,10 @@ p
 *
   outline: none
 
+.row
+  margin-right: 0
+  margin-left: 0
+
 .my-navbar
   position: relative
   width: 80%
@@ -57,19 +61,18 @@ p
     right: 0
     transform: translateY(-50%)
     padding: 12px 20px
-    font-family: 'Raleway Medium'
+    font-family: 'Raleway Regular'
     font-weight: 900
     font-size: 16px
-    color: #fff
+    color: #6fa4d7
     text-transform: uppercase
     border-radius: 3px
-    background-color: #6fa4d7
-    border-color: #111
+    border: 1px solid #6fa4d7
     @media screen and (max-width: 530px)
       display: none
     &:hover
       color: #fff
-      background: #111
+      background: #6fa4d7
       text-decoration: none
 
 .main-pic
@@ -176,13 +179,15 @@ p
     &__btn
       height: 50px
       padding: 0px 40px
-      margin-right: -5px
+      margin: 10px -5px 0 0
       font-size: 18px
       color: #333
       font-family: 'Raleway Regular'
       border: 1px solid #333
       border-radius: 3px
       background-color: #f7f7f7
+      @media screen and (max-width: 635px)
+        padding: 0px 20px
       &:hover
         box-shadow: 0 3px 13px rgba(0, 0, 0, 0.22)
 
