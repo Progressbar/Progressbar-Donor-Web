@@ -24,7 +24,8 @@ module.exports = {
           use: [{
             loader: "style-loader" // creates style nodes from JS strings
           }, {
-            loader: "css-loader" // translates CSS into CommonJS
+            loader: "css-loader", // translates CSS into CommonJS
+            options: { root: '.' }
           }, {
             loader: "sass-loader" // compiles Sass to CSS
           }]
@@ -41,10 +42,10 @@ module.exports = {
           name: '[name].[ext]?[hash]'
         }
       },
-       {
-         test: /\.css$/,
-         loader: "style-loader!css-loader"
-        }
+      {
+        test: /\.css$/,
+        loader: "style-loader!css-loader"
+      }
     ]
   },
   resolve: {
