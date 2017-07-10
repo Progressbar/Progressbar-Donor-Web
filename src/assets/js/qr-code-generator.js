@@ -1,4 +1,9 @@
 $(document).ready(function(){
-  const btcSrc = $('.btc').attr('src');
-  console.log('works', btcSrc)
+
+  $('.donation-things__buttons__btn').click(function() {
+    $('.active').removeClass('active');
+    $(this).addClass('active');
+
+
+  });
 });
