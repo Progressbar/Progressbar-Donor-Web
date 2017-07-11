@@ -37,10 +37,16 @@ p
 
 
 .my-navbar
-  position: relative
+  position: fixed
   width: 80%
   margin: 0 auto
   padding: 5px 0
+  height: 467px
+  -webkit-transition: all 0.3s
+	-moz-transition: all 0.3s
+	-ms-transition: all 0.3s
+	-o-transition: all 0.3s
+	transition: all 0.3s
   &__main-logo
     width: 250px
   &__action-btn
@@ -61,6 +67,18 @@ p
       color: #fff
       background: #111
       text-decoration: none
+
+.my-navbar.smaller
+	height: 75px
+
+.my-navbar.smaller main-pic
+	width: 150px;
+	height: 75px;
+	line-height: 55px;
+	font-size: 55px;
+	margin: 0;
+// dopisat hodnoty ake treba
+
 
 .main-pic
   position: relative
