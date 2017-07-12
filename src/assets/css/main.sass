@@ -21,20 +21,32 @@ body
   color: #565656
 
 h1
+  margin-bottom: 40px
   font-family: 'Raleway Medium'
   font-size: 40px
   text-align: center
   color: #252525
+  @media screen and (max-width: 430px)
+    font-size: 34px
 
 h3
+  padding: 20px 0
   font-family: 'Raleway Medium'
   font-size: 19px
-  color: #252525
+  color: #888
 
 p
   font-family: 'Raleway Regular'
   font-size: 16px
+  @media screen and (max-width: 370px)
+    font-size: 14px
 
+*
+  outline: 0
+
+.row
+  margin-right: 0
+  margin-left: 0
 
 .my-navbar
   position: fixed
@@ -55,17 +67,18 @@ p
     right: 0
     transform: translateY(-50%)
     padding: 12px 20px
-    font-family: 'Raleway Medium'
+    font-family: 'Raleway Regular'
     font-weight: 900
     font-size: 16px
-    color: #fff
+    color: #6fa4d7
     text-transform: uppercase
     border-radius: 3px
-    background-color: #6fa4d7
-    border-color: #111
+    border: 1px solid #6fa4d7
+    @media screen and (max-width: 530px)
+      display: none
     &:hover
       color: #fff
-      background: #111
+      background: #6fa4d7
       text-decoration: none
 
 .my-navbar.smaller
@@ -94,10 +107,16 @@ p
     font-size: 75px
     color: #888
     text-align: left
+    @media screen and (max-width: 560px)
+      font-size: 55px
+    @media screen and (max-width: 430px)
+      font-size: 42px
   &__donate-us
     font-family: "Raleway ExtraLight"
     color: #888
     font-size: 45px
+    @media screen and (max-width: 560px)
+      font-size: 38px
     &:hover
       color: #ccc
       text-decoration: none
@@ -116,11 +135,16 @@ p
   width: 70%
   margin: 0 auto
   padding: 100px 0
+  @media screen and (max-width: 760px)
+    width: 80%
   &__icons
-    padding: 40px 0
     &__icon
       position: relative
       padding: 50px 100px
+      @media screen and (max-width: 940px)
+        padding: 50px 70px
+      @media screen and (max-width: 940px)
+        padding: 50px 10px 50px 70px
 
 .icons
   position: absolute
@@ -130,23 +154,32 @@ p
   height: 150px
   z-index: -1
 
+.last-why-pb
+  padding: 50px 70px 0
+
 .support
   width: 100%
-  padding: 100px 10%
+  padding: 100px 0
   margin: 0px auto
   background-color: #f7f7f7
   &__crypto
-    padding: 40px 0
+    padding: 20px 0 40px
     &__box
-      padding: 45px
-      margin: 0 25px
+      padding: 45px 20px
       background-color: white
       border: 1px solid #eee
       border-radius: 8px
       text-align: center
 
+.support-pb-headline
+  padding: 0 10%
+
 .paybysquare
   width: 200px
+  float: right
+  @media screen and (max-width: 635px)
+    width: 160px
+    float: left
 
 .fiat
   width: 80%
@@ -158,11 +191,41 @@ p
   margin: 0px auto
   background-color: #111
   &__icons
+    text-align: center
+    padding: 20px 0
+  &__buttons
+    text-align: center
+    font-family: 'Raleway Regular'
+    &__btn
+      height: 50px
+      padding: 0px 40px
+      margin: 10px -5px 0 0
+      font-size: 18px
+      color: #333
+      font-family: 'Raleway Regular'
+      border: 1px solid #333
+      border-radius: 3px
+      background-color: #f7f7f7
+      @media screen and (max-width: 635px)
+        padding: 0px 20px
+      &:hover
+        box-shadow: 0 3px 13px rgba(0, 0, 0, 0.22)
+
+input[type="text"]
+  width: 60px
+  font-family: 'Raleway Regular'
+  text-align: right
+  &__icons
     padding: 80px 0
     text-align: center
     &__title
       padding: 20px 0
       color: #888
+
+.active
+  background-color: #333
+  color: white
+  border-color: #333
 
 .title-white
   color: #888

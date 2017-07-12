@@ -1,11 +1,13 @@
 .DS_Store
 node_modules/
+dist/
 npm-debug.log
 yarn-error.log
 *.css
 
 # Editor directories and files
 .idea
+.vscode
 *.suo
 *.ntvs*
 *.njsproj

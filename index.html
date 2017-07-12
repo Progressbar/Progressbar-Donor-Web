@@ -45,7 +45,7 @@
               <h3>We need title</h3>
               <p>We offer space for incubation of projects</p>
             </div>
-            <div class="col-sm why-progressbar__icons__icon">
+            <div class="col-sm why-progressbar__icons__icon last-why-pb">
               <img class="icons" src="./src/assets/img/bitcoin.svg" alt="">
               <h3>We need title</h3>
               <p>We support payments via cryptocurrencies for drinks and snacks</p>
@@ -55,31 +55,40 @@
     </section>
 
     <section id="support" class="support">
-      <h1>How to support Progressbar?</h1>
+      <h1 class="support-pb-headline">How to support Progressbar?</h1>
+      <div class="donation-things__buttons">
+        <button class="donation-things__buttons__btn active" type="button" name="button" value="5">5€</button>
+        <button class="donation-things__buttons__btn" type="button" name="button" value="10">10€</button>
+        <button class="donation-things__buttons__btn" type="button" name="button" value="20">20€</button>
+        <button class="donation-things__buttons__btn other" type="button" name="button" value="">
+          Other: <input type="text" name="other" value=""> €
+        </button>
+        <!-- <span class="donation-things__buttons__other">Other:  </span> -->
+      </div>
       <div class="row support__crypto">
         <div class="col-sm support__crypto__box">
-          <img class="qr-code" src="./src/assets/img/qr-code.png" alt="">
+          <img class="qr-code btc" src="./src/assets/img/qr-code.png" alt="">
           <h3>BTC</h3>
-          <p>Adress: argijofjgosdfijgosd</p>
+          <p>Address:<br> 1pbarBA4zP1bbCRydBUxweQxVfsaAHqDo</p>
         </div>
         <div class="col-sm support__crypto__box">
-          <img class="qr-code" src="./src/assets/img/qr-code.png" alt="">
-          <h3>BTC</h3>
-          <p>Adress: argijofjgosdfijgosd</p>
+          <img class="qr-code ltc" src="./src/assets/img/qr-code.png" alt="">
+          <h3>LTC</h3>
+          <p>Address:<br> LSDNJopkWAgEuhrD1ucKiFD6ybhoEeTRWH</p>
         </div>
         <div class="col-sm support__crypto__box">
-          <img class="qr-code" src="./src/assets/img/qr-code.png" alt="">
+          <img class="qr-code eth" src="./src/assets/img/qr-code.png" alt="">
           <h3>BTC</h3>
-          <p>Adress: argijofjgosdfijgosd</p>
+          <p>Address:<br> 1pbarBA4zP1bbCRydBUxweQxVfsaAHqDo</p>
         </div>
       </div>
       <div class="row fiat">
         <div class="col-sm-8">
           <h3>Fiat</h3>
           <p>
-            IBAN: 895744987532759348 <br>
-            VS: 05954 <br>
-            SWIFT: EOIJFD
+            IBAN: SK1583300000002600121198 <br>
+            VS: 102017 <br>
+            SWIFT: FIOZSKBAXXX
           </p>
         </div>
         <div class="col-sm-4">
@@ -113,8 +122,7 @@
         </div>
       </div>
     </section>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
     <script src="./dist/build.js"></script>
-    <script src="./src/assets/js/writeAnim.js"></script>
-    <script src="./src/assets/js/scrollevent.js"></script>
   </body>
 </html>
