@@ -1,34 +1,38 @@
 $(document).ready(function(){
+  const btcAdress = `1pbarBA4zP1bbCRydBUxweQxVfsaAHqDo`;
+  const ltcAdress = `LSDNJopkWAgEuhrD1ucKiFD6ybhoEeTRWH`;
+  // const ethAdress = ``;
 
-  function getRate(currency) {
+  function getRates() {
     return $.ajax({
-      url: `https://min-api.cryptocompare.com/data/price?fsym=EUR&tsyms=${currency}`,
+      // BTC, ETH, LTC
+      url: `https://min-api.cryptocompare.com/data/price?fsym=EUR&tsyms=BTC,ETH,LTC`,
       type: 'GET',
       dataType: 'json',
-      success: function(data){
-        return data[currency];
-      }
-    }).done()
+    });
   }
 
-  function convert(rate, amount) {
-    return rate * amount;
+  function generateUrl(adress, amount, rate) {
+    const valueInCrypto = amount * rate;
+    return `https://chart.googleapis.com/chart?cht=qr&chl=bitcoin%3A${adress}%3Famount%3D${valueInCrypto}&choe=UTF-8&chs=230x230`;
   }
 
-  let amount;
-  const btcAdress = `1pbarBA4zP1bbCRydBUxweQxVfsaAHqDo`;
+  function setNewQrs(amount) {
+    getRates().then(function (rate) {
+      const btcUrl = generateUrl(btcAdress, amount, rate.BTC);
+      const ltcUrl = generateUrl(ltcAdress, amount, rate.LTC);
+      $('.btc').attr('src', btcUrl);
+      $('.ltc').attr('src', ltcUrl);
 
-  const ltcAdress = `LSDNJopkWAgEuhrD1ucKiFD6ybhoEeTRWH`;
+    })
+  }
 
   $('.donation-things__buttons__btn').click(function() {
     $('.active').removeClass('active');
     $(this).addClass('active');
 
     amountInEur = $(this).val();
-    console.log('rate', getRate('BTC'))
-    const url = `https://chart.googleapis.com/chart?cht=qr&chl=bitcoin%3A${btcAdress}%3Famount%3D${amount}&choe=UTF-8&chs=230x230`
-    console.log(url)
-  });
 
-  // $('.btc').attr('src')
+    setNewQrs(amountInEur);
+  });
 });
