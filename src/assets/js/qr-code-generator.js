@@ -27,12 +27,36 @@ $(document).ready(function(){
     })
   }
 
+  var delay = (function(){
+    var timer = 0;
+    return function(callback, ms){
+      clearTimeout (timer);
+      timer = setTimeout(callback, ms);
+    };
+  })();
+
+  // handler for clicking on buttons
   $('.donation-things__buttons__btn').click(function() {
+    // handle selection
     $('.active').removeClass('active');
     $(this).addClass('active');
 
-    amountInEur = $(this).val();
+    // handle generation of qr codes
+    if ($(this)[0].classList[1] === 'other') {
+      const inputValue = $('.donate-amount').val();
 
-    setNewQrs(amountInEur);
+      if (inputValue) {
+        setNewQrs(inputValue);
+      }
+      $('.donate-amount').on('input', function() {
+        const amountInEur = $(this).val();
+        delay(function(){
+          setNewQrs(amountInEur);
+        }, 500 );
+      })
+    } else {
+      const amountInEur = $(this).val();
+      setNewQrs(amountInEur);
+    }
   });
 });
