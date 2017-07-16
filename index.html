@@ -5,13 +5,14 @@
     <title>progressbar-donor-web</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./dist/main.css">
   </head>
   <body>
     <div id="app"></div>
 
     <header class="my-navbar">
       <img class="my-navbar__main-logo" src="./src/assets/img/logo-progressbar.png" alt="">
-      <a class="my-navbar__action-btn" href="#support">Donate us ↓ </a>
+      <a class="my-navbar__action-btn" href="#support">Donate ↓ </a>
     </header>
 
     <section class="main-pic">
@@ -21,7 +22,7 @@
          data-period="2000"
          data-rotate='[ "CryptoParties", "Open source", "Demos", "Open data", "Bitcoin" ]'></span>
       </h1>
-      <a href="#support" class="main-pic__donate-us">Donate us ↓</a>
+      <a href="#support" class="main-pic__donate-us">Donate ↓</a>
     </section>
 
     <section class="why-progressbar">
@@ -42,7 +43,7 @@
           <div class="row">
             <div class="col-sm why-progressbar__icons__icon">
               <img class="icons" src="./src/assets/img/bitcoin.svg" alt="">
-              <h3>We need title</h3>
+              <h3>We need titles</h3>
               <p>We offer space for incubation of projects</p>
             </div>
             <div class="col-sm why-progressbar__icons__icon last-why-pb">
@@ -61,7 +62,7 @@
         <button class="donation-things__buttons__btn" type="button" name="button" value="10">10€</button>
         <button class="donation-things__buttons__btn" type="button" name="button" value="20">20€</button>
         <button class="donation-things__buttons__btn other" type="button" name="button" value="">
-          Other: <input type="text" name="other" value=""> €
+          Other: <input class="donate-amount" pattern="\d{1,5}" type="text" name="other" value=""> €
         </button>
         <!-- <span class="donation-things__buttons__other">Other:  </span> -->
       </div>

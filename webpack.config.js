@@ -1,5 +1,7 @@
-var path = require('path')
-var webpack = require('webpack')
+const path = require('path')
+const ExtractTextPlugin = require("extract-text-webpack-plugin")
+const webpack = require('webpack')
+const extractCSS = new ExtractTextPlugin('./[name].css');
 
 module.exports = {
   entry: './src/main.js',
@@ -21,14 +23,16 @@ module.exports = {
       },
       {
         test: /\.s[ac]ss$/,
-          use: [{
-            loader: "style-loader" // creates style nodes from JS strings
-          }, {
-            loader: "css-loader", // translates CSS into CommonJS
-            options: { root: '' }
-          }, {
-            loader: "sass-loader" // compiles Sass to CSS
-          }]
+          use: extractCSS.extract({
+            fallbackLoader: "style-loader", // creates style nodes from JS strings
+            use:
+            [{
+              loader: "css-loader", // translates CSS into CommonJS
+              options: { root: '' }
+            }, {
+              loader: "sass-loader" // compiles Sass to CSS
+            }]
+          })
       },
       {
         test: /\.js$/,
@@ -67,7 +71,8 @@ module.exports = {
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery"
-   })
+   }),
+   extractCSS
   ]
 }
 
