@@ -17,12 +17,29 @@ $(document).ready(function(){
     return `https://chart.googleapis.com/chart?cht=qr&chl=bitcoin%3A${adress}%3Famount%3D${valueInCrypto}&choe=UTF-8&chs=230x230`;
   }
 
+  function generateBySquareUrl(amount) {
+    switch (amount) {
+      case '0':
+        return `./src/assets/img/pbsqr-0e.png`;
+      case '5':
+        return `./src/assets/img/pbsqr-5e.png`;
+      case '10':
+        return `./src/assets/img/pbsqr-10e.png`;
+      case '20':
+        return `./src/assets/img/pbsqr-20e.png`;
+      default:
+        return `https://ilfiron.com/payquicker/code.php?t=0&s=256&r=0&v=2&invoiceid=&amount=${amount}&iban=SK1583300000002600121198&bic=FIOZSKBAXXX&vs=102017&cs=&ss=&paynote=`
+    }
+  }
+
   function setNewQrs(amount) {
     getRates().then(function (rate) {
       const btcUrl = generateUrl(btcAdress, amount, rate.BTC);
       const ltcUrl = generateUrl(ltcAdress, amount, rate.LTC);
+      const bySquareUrl = generateBySquareUrl(amount);
       $('.btc').attr('src', btcUrl);
       $('.ltc').attr('src', ltcUrl);
+      $('.paybysquare').attr('src', bySquareUrl);
 
     })
   }
