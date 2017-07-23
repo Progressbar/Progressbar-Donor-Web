@@ -1,3 +1,4 @@
+'use strict'
 $(document).ready(function(){
   const btcAdress = `1pbarBA4zP1bbCRydBUxweQxVfsaAHqDo`;
   const ltcAdress = `LSDNJopkWAgEuhrD1ucKiFD6ybhoEeTRWH`;

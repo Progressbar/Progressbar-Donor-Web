@@ -1,4 +1,5 @@
-$( window ).scroll(function() {
+'use strict'
+$(window).scroll(function() {
   if (screen.width > 414) {
     if ($(document).scrollTop() > 50) {
       $('.my-navbar').css( 'height', '75px' );
