@@ -6,3 +6,5 @@ import animate from 'animate.css';
 import writeAnimation from './assets/js/write-animation.js';
 import qrCodeGererator from './assets/js/qr-code-generator.js';
 import navbarAnimaton from './assets/js/navbar-animation.js';
+import donationScrolling from './assets/js/scrolling.js';
+import langSwitching from './assets/js/lang-switching.js';

@@ -1,21 +1,11 @@
 $( window ).scroll(function() {
   if (screen.width > 414) {
-  if ($(document).scrollTop() > 50) {
-    $('.my-navbar').css( 'height', '75px' );
-    $('.my-navbar__main-logo').css( 'width', '200px' );
-  } else {
-    $('.my-navbar').css( 'height', '95px' );
-    $('.my-navbar__main-logo').css( 'width', '250px' );
+    if ($(document).scrollTop() > 50) {
+      $('.my-navbar').css( 'height', '75px' );
+      $('.my-navbar__main-logo').css( 'width', '200px' );
+    } else {
+      $('.my-navbar').css( 'height', '95px' );
+      $('.my-navbar__main-logo').css( 'width', '250px' );
+    }
   }
-}
 });
-
-function scrollToDonateSection() {
-    $('html, body').animate({
-        scrollTop: $("#support").offset().top
-    }, 1500);
-}
-
-$("#donate").click(scrollToDonateSection);
-
-$("#donate-1").click(scrollToDonateSection);
