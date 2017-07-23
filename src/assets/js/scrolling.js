@@ -1,7 +1,7 @@
 function scrollToDonateSection() {
     $('html, body').animate({
         scrollTop: $("#support").offset().top
-    }, 1500);
+    }, 1000, 'swing');
 }
 
 $("#donate").click(scrollToDonateSection);
