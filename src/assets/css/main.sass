@@ -22,6 +22,9 @@
   -ms-transition: all 0.2s ease
   -o-transition: all 0.2s ease
 
+.sk
+  display: none
+
 body
   font-family: 'Relaway Regular'
   color: #565656
@@ -64,25 +67,67 @@ p
   &__main-logo
     width: 250px
     margin-left: 10%
+    -webkit-transition: all 0.4s ease
+    -moz-transition: all 0.4s ease
+    -ms-transition: all 0.4s ease
+    -o-transition: all 0.4s ease
+    @media screen and (max-width: 413px)
+      width: 200px
   &__action-btn
     position: absolute
     top: 50%
-    right: 10%
+    right: 16%
     transform: translateY(-50%)
-    padding: 12px 20px
+    padding: 10px 20px
     font-family: 'Raleway Regular'
     font-weight: 900
     font-size: 16px
     color: #6fa4d7
+    background-color: white
     text-transform: uppercase
     border-radius: 3px
     border: 1px solid #6fa4d7
-    @media screen and (max-width: 530px)
+    cursor: pointer
+    @media screen and (max-width: 1300px)
+      right: 18%
+    @media screen and (max-width: 1050px)
+      right: 20%
+    @media screen and (max-width: 1050px)
+      right: 23%
+    @media screen and (max-width: 635px)
       display: none
     &:hover
       color: #fff
       background: #6fa4d7
+      box-shadow: 0 3px 13px rgba(0, 0, 0, 0.22)
       text-decoration: none
+  &__lang-switcher
+    font-family: 'Raleway Medium'
+    position: absolute
+    top: 50%
+    right: 10%
+    transform: translateY(-50%)
+    @media screen and (max-width: 413px)
+      font-size: 14px
+    &__current
+      color: #252525
+    &__unactive
+      font-family: 'Raleway Regular'
+      &:hover ~ hr
+        margin-left: 60%
+
+ul li
+  display: inline-flex
+  text-align: center
+  cursor: pointer
+
+hr
+  height: 2px
+  width: 40%
+  margin: 0
+  background-color: #232323
+  border: none
+  transition: .3s ease-in-out
 
 .main-pic
   position: relative
@@ -159,9 +204,14 @@ button:focus
       padding: 45px 20px
       background-color: white
       text-align: center
+      z-index: 5
+      &:hover
+        box-shadow: 0 3px 13px rgba(0, 0, 0, 0.22)
+        z-index: 10
 
 .support-pb-headline
   padding: 0 10%
+  margin-bottom: 0
 
 .paybysquare
   width: 200px
@@ -182,9 +232,14 @@ button:focus
   padding: 100px 10%
   margin: 0px auto
   background-color: #111
+  &__desc
+    text-align: center
+    margin-bottom: 50px
   &__icons
     text-align: center
     padding: 20px 0
+  &__icons__title
+    font-family: 'Raleway ExtraLight'
   &__buttons
     text-align: center
     font-family: 'Raleway Regular'
@@ -198,10 +253,16 @@ button:focus
       border: 1px solid #333
       border-radius: 3px
       background-color: #f7f7f7
+      cursor: pointer
       @media screen and (max-width: 635px)
         padding: 0px 20px
       &:hover
         box-shadow: 0 3px 13px rgba(0, 0, 0, 0.22)
+
+.donation-desc
+  width: 100%
+  margin: 0px auto
+  text-align: center
 
 input[type="text"]
   width: 60px
@@ -221,7 +282,9 @@ input[type="text"]
 
 .title-white
   color: #888
+  font-family: 'Raleway ExtraLight'
+  margin-bottom: 15px
 
 .donation-icons
-  width: 150px
+  width: 110px
   height: 150px

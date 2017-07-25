@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
-    <title>progressbar-donor-web</title>
+    <title>Progressbar Donor Web</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/png" href="./src/assets/img/progressbar_square.png"/>
@@ -13,7 +13,16 @@
 
     <header class="my-navbar">
       <img class="my-navbar__main-logo" src="./src/assets/img/logo-progressbar.png" alt="">
-      <a class="my-navbar__action-btn" href="#support">Donate ↓ </a>
+      <button class="my-navbar__action-btn" id="donate">Donate ↓ </button>
+        <ul class="my-navbar__lang-switcher">
+          <li class="my-navbar__lang-switcher__current"><a id="english">EN</a></li>
+          <li> / </li>
+          <li class="my-navbar__lang-switcher__unactive"><a id="slovak">SK</a></li>
+          <hr />
+      </ul>
+      <!-- <span class="my-navbar__lang-switcher">
+        <span class="my-navbar__lang-switcher__current">EN </span>/ SK
+      </span> -->
     </header>
 
     <section class="main-pic">
@@ -21,67 +30,87 @@
         <span
          class="txt-rotate"
          data-period="2000"
-         data-rotate='[ "CryptoParties", "Open source", "Demos", "Open data", "Bitcoin" ]'></span>
+         data-rotate='[ "CryptoParties", "Open source", "Demos", "Meetups", "Biohacking", "Open data", "Bitcoin", "Travel hacking", "Nootropics", "Software & hardware art", "Live streaming" ]'></span>
       </h1>
-      <a href="#support" class="main-pic__donate-us">Donate ↓</a>
+      <p id="donate-1" class="main-pic__donate-us en">Donate ↓</p>
+      <p id="donate-1" class="main-pic__donate-us sk">Podpor nás ↓</p>
     </section>
 
     <section class="why-progressbar">
-      <h1>Why Progressbar</h1>
+      <h1 class="en">Why Progressbar</h1>
+      <h1 class="sk">Prečo Progressbar</h1>
         <div class="why-progressbar__icons">
           <div class="row">
             <div class="col-sm why-progressbar__icons__icon">
               <img class="icons" src="./src/assets/img/bitcoin.svg" alt="">
-              <h3>We need title</h3>
-              <p>Progressbar empowers free peer-driven knowledge</p>
+              <h3 class="en">We need title</h3>
+              <h3 class="sk">Potrebujeme nadpis</h3>
+              <p class="en">Progressbar empowers free peer-driven knowledge</p>
+              <p class="sk">Progressbar podporuje vzájomné zdielanie vedomostí</p>
             </div>
             <div class="col-sm why-progressbar__icons__icon">
               <img class="icons" src="./src/assets/img/bitcoin.svg" alt="">
-              <h3>We need title</h3>
-              <p>We offer affordable 24/7 cowork in downtown with high speed internet</p>
+              <h3 class="en">We need title</h3>
+              <h3 class="sk">Potrebujeme nadpis</h3>
+              <p class="en">We offer space for incubation of projects</p>
+              <p class="sk">Ponúkame miesto pre inkubáciu projektov</p>
             </div>
           </div>
           <div class="row">
             <div class="col-sm why-progressbar__icons__icon">
               <img class="icons" src="./src/assets/img/bitcoin.svg" alt="">
-              <h3>We need titles</h3>
-              <p>We offer space for incubation of projects</p>
+              <h3 class="en">We need title</h3>
+              <h3 class="sk">Potrebujeme nadpis</h3>
+              <p class="en">We offer affordable 24/7 cowork in downtown with high speed internet</p>
+              <p class="sk">Ponúkame 24/7 prístupný coworkingový priestor v centre mesta s vysokorýchlym internetom</p>
             </div>
             <div class="col-sm why-progressbar__icons__icon">
               <img class="icons" src="./src/assets/img/bitcoin.svg" alt="">
-              <h3>We need title</h3>
-              <p>We support payments via cryptocurrencies for drinks and snacks</p>
+              <h3 class="en">We need title</h3>
+              <h3 class="sk">Potrebujeme nadpis</h3>
+              <p class="en">We support payments via cryptocurrencies for drinks and snacks</p>
+              <p class="sk">Prijímame platby kryptomenami za občerstvenie</p>
             </div>
           </div>
       </div>
     </section>
 
     <section id="support" class="support">
-      <h1 class="support-pb-headline">How to support Progressbar?</h1>
+      <h1 class="support-pb-headline en">How to support Progressbar?</h1>
+      <h1 class="support-pb-headline sk">Ako môžete podporiť Progressbar?</h1>
+      <h3 class="donation-desc en">~ Choose an amount:</h3>
+      <h3 class="donation-desc sk">~ Vyberte hodnotu:</h3>
       <div class="donation-things__buttons">
         <button class="donation-things__buttons__btn active" type="button" name="button" value="5">5€</button>
         <button class="donation-things__buttons__btn" type="button" name="button" value="10">10€</button>
         <button class="donation-things__buttons__btn" type="button" name="button" value="20">20€</button>
-        <button class="donation-things__buttons__btn other" type="button" name="button" value="">
+        <button class="donation-things__buttons__btn other en" type="button" name="button" value="">
           Other: <input class="donate-amount" pattern="\d{1,5}" type="text" name="other" value=""> €
         </button>
-        <!-- <span class="donation-things__buttons__other">Other:  </span> -->
+        <button class="donation-things__buttons__btn other sk" type="button" name="button" value="">
+          Iné: <input class="donate-amount" pattern="\d{1,5}" type="text" name="other" value=""> €
+        </button>
       </div>
+      <h3 class="donation-desc en">~ Scan one of QR codes:</h3>
+      <h3 class="donation-desc sk">~ Oskenujte jeden z QR kodov:</h3>
       <div class="row support__crypto">
         <div class="col-sm support__crypto__box">
-          <img class="qr-code btc" src="./src/assets/img/qr-code.png" alt="">
+          <img class="qr-code btc" src="./src/assets/img/default-qr-btc.png" alt="">
           <h3>BTC</h3>
-          <p>Address:<br> 1pbarBA4zP1bbCRydBUxweQxVfsaAHqDo</p>
+          <p class="en">Address:<br> 1pbarBA4zP1bbCRydBUxweQxVfsaAHqDo</p>
+          <p class="sk">Adresa:<br> 1pbarBA4zP1bbCRydBUxweQxVfsaAHqDo</p>
         </div>
         <div class="col-sm support__crypto__box">
-          <img class="qr-code ltc" src="./src/assets/img/qr-code.png" alt="">
+          <img class="qr-code ltc" src="./src/assets/img/default-qr-ltc.png" alt="">
           <h3>LTC</h3>
-          <p>Address:<br> LSDNJopkWAgEuhrD1ucKiFD6ybhoEeTRWH</p>
+          <p class="en">Address:<br> LSDNJopkWAgEuhrD1ucKiFD6ybhoEeTRWH</p>
+          <p class="sk">Adresa:<br> LSDNJopkWAgEuhrD1ucKiFD6ybhoEeTRWH</p>
         </div>
         <div class="col-sm support__crypto__box">
-          <img class="qr-code eth" src="./src/assets/img/qr-code.png" alt="">
-          <h3>BTC</h3>
-          <p>Address:<br> 1pbarBA4zP1bbCRydBUxweQxVfsaAHqDo</p>
+          <img class="qr-code eth" src="./src/assets/img/default-qr-eth.png" alt="">
+          <h3>ETH</h3>
+          <p class="en">Address:<br> 0x363A4300D6800E1a45673255928d00c8b2DC7845</p>
+          <p class="sk">Adresa:<br> 0x363A4300D6800E1a45673255928d00c8b2DC7845</p>
         </div>
       </div>
       <div class="row fiat">
@@ -100,29 +129,44 @@
     </section>
 
     <section class="donation-things">
-      <h1 class="title-white">What will your donation go to?</h1>
+      <h1 class="title-white en">What will your donation go to?</h1>
+      <h1 class="title-white sk">Ako použijeme váš dobrovoľný príspevok?</h1>
+      <p class="donation-things__desc en">Everything marked with ✓ already accomplished</p>
+      <p class="donation-things__desc sk">Všetko označené s ✓ sme už zabezpečili</p>
       <div class="row donation-things__icons">
         <div class="col-sm">
-          <img class="donation-icons" src="./src/assets/img/bitcoin.svg" alt="">
-          <h3 class="donation-things__icons__title">Headline</h3>
+          <img class="donation-icons" src="./src/assets/img/space-rent.svg" alt="">
+          <h3 class="donation-things__icons__title en">Space Rent</h3>
+          <h3 class="donation-things__icons__title sk">Prenájom priestorov</h3>
         </div>
         <div class="col-sm">
-          <img class="donation-icons" src="./src/assets/img/bitcoin.svg" alt="">
-          <h3 class="donation-things__icons__title">Headline</h3>
+          <img class="donation-icons" src="./src/assets/img/projector.svg" alt="">
+          <h3 class="donation-things__icons__title en">Projector</h3>
+          <h3 class="donation-things__icons__title sk">Premietaci projektor</h3>
         </div>
         <div class="col-sm">
-          <img class="donation-icons" src="./src/assets/img/bitcoin.svg" alt="">
-          <h3 class="donation-things__icons__title">Headline</h3>
+          <img class="donation-icons" src="./src/assets/img/air-conditioning.svg" alt="">
+          <h3 class="donation-things__icons__title en">Air conditioning</h3>
+          <h3 class="donation-things__icons__title sk">Kvalitná klimatizácia</h3>
         </div>
         <div class="col-sm">
-          <img class="donation-icons" src="./src/assets/img/bitcoin.svg" alt="">
-          <h3 class="donation-things__icons__title">Headline</h3>
+          <img class="donation-icons" src="./src/assets/img/microphone.svg" alt="">
+          <h3 class="donation-things__icons__title en">Presentation equipment</h3>
+          <h3 class="donation-things__icons__title sk">Prezentačné vybavenie</h3>
         </div>
         <div class="col-sm">
-          <img class="donation-icons" src="./src/assets/img/bitcoin.svg" alt="">
-          <h3 class="donation-things__icons__title">Headline</h3>
+          <img class="donation-icons" src="./src/assets/img/door-lock.svg" alt="">
+          <h3 class="donation-things__icons__title en">✓ Electronic door lock</h3>
+          <h3 class="donation-things__icons__title sk">✓ Elektronické zamykanie dverí</h3>
         </div>
       </div>
+      <!-- <div class="container">
+        <ul>
+          <li class="one"><a href="#">EN</a></li>
+          <li class="two"><a href="#">SK</a></li>
+          <hr />
+      </ul>
+    </div> -->
     </section>
     <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
     <script src="./dist/build.js"></script>
