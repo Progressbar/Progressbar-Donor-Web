@@ -2,7 +2,7 @@
 $(document).ready(function(){
   const btcAdress = `1pbarBA4zP1bbCRydBUxweQxVfsaAHqDo`;
   const ltcAdress = `LSDNJopkWAgEuhrD1ucKiFD6ybhoEeTRWH`;
-  // const ethAdress = ``;
+  const ethAdress = `0x363A4300D6800E1a45673255928d00c8b2DC7845`;
 
   function getRates() {
     return $.ajax({
