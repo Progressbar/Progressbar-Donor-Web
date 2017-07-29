@@ -10,16 +10,16 @@ jQuery.fn.swapWith = function(to) {
 
 $( "#slovak" ).click(function() {
   $("#slovak").attr({'id':'notactive', 'id': 'slovak'});
-  $(".en").fadeOut(500, 'linear', function(){
-    $(".sk").stop().fadeTo('slow', 1);
+  $(".en").fadeOut(200, 'linear', function(){
+    $(".sk").stop().fadeTo(1000, 1);
   });
   $(this).swapWith("#english");
  });
 
 $( "#english" ).click(function() {
   $("#english").attr({'id':'notactive', 'id': 'english'})
-  $(".sk").fadeOut(500, 'linear', function(){
-    $(".en").stop().fadeTo('slow', 1);
+  $(".sk").fadeOut(200, 'linear', function(){
+    $(".en").stop().fadeTo(1000, 1);
   });
   $(this).swapWith("#slovak");
 });
