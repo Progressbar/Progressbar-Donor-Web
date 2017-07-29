@@ -8,7 +8,6 @@ $(document).ready(function(){
     const unactive = $('.my-navbar__lang-switcher__unactive');
     const active = $('.my-navbar__lang-switcher__current');
     const hr = $('.my-navbar__lang-switcher__hr');
-    console.log(hr)
     let firstPx = 612;
 
     if (screen.width < 414) {
