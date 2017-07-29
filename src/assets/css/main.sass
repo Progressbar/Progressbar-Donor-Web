@@ -89,7 +89,6 @@ p
     color: #6fa4d7
     background-color: transparent
     text-transform: uppercase
-    border-radius: 3px
     border: 1px solid #6fa4d7
     cursor: pointer
     @media screen and (max-width: 1300px)
@@ -161,6 +160,12 @@ hr
       color: #ccc
       text-decoration: none
       cursor: pointer
+
+.main-pic__donate-us.sk
+  width: 300px
+
+.main-pic__donate-us.en
+  width: 200px
 
 .my-btn
   padding: 12px 20px
@@ -245,6 +250,8 @@ button:focus
   &__icons__title
     font-family: 'Raleway ExtraLight'
   &__buttons
+    display: flex
+    justify-content: center
     text-align: center
     font-family: 'Raleway Regular'
     &__btn
@@ -255,7 +262,6 @@ button:focus
       color: #333
       font-family: 'Raleway Regular'
       border: 1px solid #333
-      border-radius: 3px
       background-color: #f7f7f7
       cursor: pointer
       @media screen and (max-width: 635px)
