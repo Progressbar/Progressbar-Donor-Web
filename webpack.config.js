@@ -55,8 +55,7 @@ module.exports = {
   resolve: {
     alias: {
       'bootstrap-scss$': '../node_modules/bootstrap/scss/bootstrap.scss',
-      'bootstrap-js$': '../node_modules/bootstrap/dist/js/bootstrap.min.js',
-      'animate-css$': '../node_modules/animate'
+      'bootstrap-js$': '../node_modules/bootstrap/dist/js/bootstrap.js',
     }
   },
   devServer: {
@@ -77,9 +76,11 @@ module.exports = {
 }
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports.devtool = '#source-map'
+  const me = module.exports
+  me.devtool = '#source-map'
+  me.output.publicPath = ''
   // http://vue-loader.vuejs.org/en/workflow/production.html
-  module.exports.plugins = (module.exports.plugins || []).concat([
+  me.plugins = (module.exports.plugins || []).concat([
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: '"production"'
