@@ -68,15 +68,25 @@ $(document).ready(function(){
       if (inputValue) {
         setNewQrs(inputValue);
       }
-      $('.donate-amount').on('input', function() {
-        const amountInEur = $(this).val();
-        delay(function(){
-          setNewQrs(amountInEur);
-        }, 500 );
-      })
     } else {
-      const amountInEur = $(this).val();
+      const amountInEur = this.dataset.amount;
       setNewQrs(amountInEur);
     }
   });
+  $('.donate-amount').on('input', function() {
+    this.dataset.amount = $(this).val();
+    const amountInEur = this.dataset.amount;
+    delay(function(){
+      setNewQrs(amountInEur);
+    }, 500);
+  })
+
+  // make divs accessible
+  window.addEventListener('keydown', function(e) {
+    // if focused element is a crypto box  and space/return are pressed
+    if(document.activeElement.classList.contains('donation-things__buttons__btn') && [32, 13].indexOf(e.keyCode) > -1) {
+      document.activeElement.click();
+      e.preventDefault();
+    }
+  })
 });
