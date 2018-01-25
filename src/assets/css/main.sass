@@ -268,6 +268,7 @@ button:focus
     font-family: 'Raleway Regular'
     &__btn
       height: 50px
+      line-height: 50px
       padding: 0px 40px
       margin: 10px -5px 0 0
       font-size: 18px
@@ -279,7 +280,7 @@ button:focus
       @media screen and (max-width: 635px)
         padding: 0px 15px
         font-size: 16px !important
-      &:hover
+      &:hover,&:focus
         box-shadow: 0 3px 13px rgba(0, 0, 0, 0.22)
 
 .donation-desc
@@ -291,6 +292,7 @@ input[type="number"]
   width: 60px
   font-family: 'Raleway Regular'
   text-align: right
+  line-height: initial
   @media screen and (max-width: 375px)
     width: 30px
   &__icons
@@ -314,5 +316,12 @@ input[type="number"]
   width: 110px
   height: 150px
 
+.support__crypto__box
+  &,:hover
+    color: #333;
+
 .address
-  work-break: break-all
+  font-size: 16px
+  color: #aad;
+  @media screen and (max-width: 455px)
+    font-size: 3vw

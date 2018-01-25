@@ -82,55 +82,61 @@
       <h3 class="donation-desc sk">~ Vyberte hodnotu:</h3>
       <div class="donation-things__buttons">
         <div class="button-wrap en">
-          <button class="donation-things__buttons__btn active" type="button" name="button" value="5">5€</button>
+          <div tabindex="0" class="donation-things__buttons__btn active" data-amount="5">5€</div>
         </div>
         <div class="button-wrap sk">
-          <button class="donation-things__buttons__btn active" type="button" name="button" value="5">5€</button>
+          <div tabindex="0" class="donation-things__buttons__btn active" data-amount="5">5€</div>
         </div>
         <div class="button-wrap en">
-          <button class="donation-things__buttons__btn" type="button" name="button" value="10">10€</button>
+          <div tabindex="0" class="donation-things__buttons__btn" data-amount="10">10€</div>
         </div>
         <div class="button-wrap sk">
-          <button class="donation-things__buttons__btn" type="button" name="button" value="10">10€</button>
+          <div tabindex="0" class="donation-things__buttons__btn" data-amount="10">10€</div>
         </div>
         <div class="button-wrap en">
-          <button class="donation-things__buttons__btn" type="button" name="button" value="20">20€</button>
+          <div tabindex="0" class="donation-things__buttons__btn" data-amount="20">20€</div>
         </div>
         <div class="button-wrap sk">
-          <button class="donation-things__buttons__btn" type="button" name="button" value="20">20€</button>
+          <div tabindex="0" class="donation-things__buttons__btn" data-amount="20">20€</div>
         </div>
         <div class="button-wrap">
-          <button class="donation-things__buttons__btn other en" type="button" name="button" value="">
-            Other: <input class="donate-amount" pattern="\d{1,5}" type="number" name="other" value=""> €
-          </button>
+          <div tabindex="0" class="donation-things__buttons__btn other en" data-amount="">
+            Other: <input class="donate-amount" pattern="\d{1,5}" type="number" name="other" value="" min="1" step="1"> €
+          </div>
         </div>
         <div class="button-wrap">
-          <button class="donation-things__buttons__btn other sk" type="button" name="button" value="">
-            Iné: <input class="donate-amount" pattern="\d{1,5}" type="number" name="other" value=""> €
-          </button>
+          <div tabindex="0" class="donation-things__buttons__btn other sk" data-amount="">
+            Iné: <input class="donate-amount" pattern="\d{1,5}" type="number" name="other" value="" min="1" step="1"> €
+          </div>
         </div>
       </div>
       <h3 class="donation-desc en">~ Scan one of QR codes:</h3>
       <h3 class="donation-desc sk">~ Oskenujte jeden z QR kódov:</h3>
       <div class="row support__crypto">
-        <div class="col-sm support__crypto__box">
+        <a href="https://blockchain.info/address/1pbarBA4zP1bbCRydBUxweQxVfsaAHqDo" class="col-sm support__crypto__box">
           <img class="qr-code btc" src="./src/assets/img/default-qr-btc.png" alt="">
           <h3>BTC</h3>
-          <p class="en">Address →<br> <p class="en address"><a href="https://blockchain.info/address/1pbarBA4zP1bbCRydBUxweQxVfsaAHqDo">1pbarBA4zP1bbCRydBUxweQxVfsaAHqDo</a></p>
-          <p class="sk">Adresa →<br> <p class="sk address"><a href="https://blockchain.info/address/1pbarBA4zP1bbCRydBUxweQxVfsaAHqDo">1pbarBA4zP1bbCRydBUxweQxVfsaAHqDo</a></p>
-        </div>
-        <div class="col-sm support__crypto__box">
-          <img class="qr-code eth" src="./src/assets/img/default-qr-eth.png" alt="">
-          <h3>ETH</h3>
-          <p class="en">Address →<br> <p class="en address"><a href="https://etherscan.io/address/0x363a4300d6800e1a45673255928d00c8b2dc7845">0x363A4300D6800E1a45673255928d00c8b2DC7845</a></p>
-          <p class="sk">Adresa →<br> <p class="sk address"><a href="https://etherscan.io/address/0x363a4300d6800e1a45673255928d00c8b2dc7845">0x363A4300D6800E1a45673255928d00c8b2DC7845</a></p>
-        </div>
-        <div class="col-sm support__crypto__box">
+          <p class="en">Address →<br>
+          <p class="en address">1pbarBA4zP1bbCRydBUxweQxVfsaAHqDo</p>
+          <p class="sk">Adresa →<br>
+          <p class="sk address">1pbarBA4zP1bbCRydBUxweQxVfsaAHqDo</p>
+        </a>
+        <a href="https://live.blockcypher.com/ltc/address/LSDNJopkWAgEuhrD1ucKiFD6ybhoEeTRWH/" class="col-sm support__crypto__box">
           <img class="qr-code ltc" src="./src/assets/img/default-qr-ltc.png" alt="">
           <h3>LTC</h3>
-          <p class="en">Address →<br> <p class="en address"><a href="https://live.blockcypher.com/ltc/address/LSDNJopkWAgEuhrD1ucKiFD6ybhoEeTRWH/">LSDNJopkWAgEuhrD1ucKiFD6ybhoEeTRWH</a></p>
-          <p class="sk">Adresa →<br> <p class="sk address"><a href="https://live.blockcypher.com/ltc/address/LSDNJopkWAgEuhrD1ucKiFD6ybhoEeTRWH/">LSDNJopkWAgEuhrD1ucKiFD6ybhoEeTRWH</a></p>
-        </div>
+          <p class="en">Address →<br>
+          <p class="en address">LSDNJopkWAgEuhrD1ucKiFD6ybhoEeTRWH</p>
+          <p class="sk">Adresa →<br>
+          <p class="sk address">LSDNJopkWAgEuhrD1ucKiFD6ybhoEeTRWH</p>
+        </a>
+        <a href="https://etherscan.io/address/0x363a4300d6800e1a45673255928d00c8b2dc7845" class="col-sm support__crypto__box">
+          <img class="qr-code eth" src="./src/assets/img/default-qr-eth.png" alt="">
+          <h3>ETH</h3>
+          <p class="en">Address →<br>
+          <p class="en address">0x363A4300D6800E1a45673255928d00c8b2DC7845</p>
+          <p class="sk">Adresa →<br>
+          <p class="sk address">0x363a4300d6800e1a45673255928d00c8b2dc7845</p>
+        </a>
       </div>
       <div class="row fiat">
         <div class="col-sm-8">
