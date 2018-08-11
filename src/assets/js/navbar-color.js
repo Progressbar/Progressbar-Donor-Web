@@ -11,7 +11,8 @@ $(document).ready(function(){
 
   $(window).scroll(function() {
     const navbar = $('.my-navbar');
-    const navbarLogo = $('.my-navbar__main-logo');
+    const navbarLogoWhite = $('.my-navbar__main-logo__white');
+    const navbarLogoBlack = $('.my-navbar__main-logo__black');
     const navbarButton = $('.my-navbar__action-btn');
     // const unactive = $('.my-navbar__lang-switcher__unactive');
     const active = $('.my-navbar__lang-switcher__current');
@@ -21,8 +22,9 @@ $(document).ready(function(){
 
       if (!isBlack) {
         isBlack = !isBlack;
-        navbarLogo.fadeOut(200, function () {
-          navbarLogo.attr('src', './src/assets/img/logo-progressbar.png')
+        navbarLogoBlack.fadeOut(200, function () {
+          navbarLogoBlack.addClass('hidden')
+          navbarLogoWhite.removeClass('hidden')
           navbar.css('background-color', 'white');
           active.css('color', 'black');
           hr.css('background-color', '#232323')
@@ -32,8 +34,9 @@ $(document).ready(function(){
 
       if (isBlack) {
         isBlack = !isBlack;
-        navbarLogo.fadeOut(200, function () {
-          navbarLogo.attr('src', './src/assets/img/logo-progressbar-black.png')
+        navbarLogoWhite.fadeOut(200, function () {
+          navbarLogoWhite.addClass('hidden')
+          navbarLogoBlack.removeClass('hidden')
           navbar.css('background-color', '#111');
           active.css('color', 'white');
           hr.css('background-color', 'white')
@@ -43,8 +46,9 @@ $(document).ready(function(){
 
       if (!isBlack) {
         isBlack = !isBlack;
-        navbarLogo.fadeOut(200, function () {
-          navbarLogo.attr('src', './src/assets/img/logo-progressbar.png')
+        navbarLogoBlack.fadeOut(200, function () {
+          navbarLogoBlack.addClass('hidden')
+          navbarLogoWhite.removeClass('hidden')
           navbar.css('background-color', 'white');
           active.css('color', 'black');
           hr.css('background-color', '#232323')
