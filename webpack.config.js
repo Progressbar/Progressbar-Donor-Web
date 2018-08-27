@@ -2,13 +2,16 @@ const path = require('path')
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
 const webpack = require('webpack')
 const extractCSS = new ExtractTextPlugin('./[name].css');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
+const OUTPUT_PATH = './dist'
 
 module.exports = {
   entry: './src/main.js',
   output: {
-    path: path.resolve(__dirname, './dist'),
-		publicPath: '/dist',
-    filename: 'build.js'
+    path: path.resolve(__dirname, OUTPUT_PATH),
+		publicPath: './',
+    filename: 'dist.js'
   },
   module: {
     rules: [
@@ -78,9 +81,14 @@ module.exports = {
 if (process.env.NODE_ENV === 'production') {
   const me = module.exports
   me.devtool = '#source-map'
-  me.output.publicPath = ''
+  // me.output.publicPath = ''
   // http://vue-loader.vuejs.org/en/workflow/production.html
   me.plugins = (module.exports.plugins || []).concat([
+    new HtmlWebpackPlugin({
+      hash: true,
+      inject: true,
+      template: './src/index.html'
+    }),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: '"production"'
